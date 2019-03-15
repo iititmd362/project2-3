@@ -4,7 +4,7 @@
   * Trevor Loveday = https://github.com/trevhead0/project2-3
 
 # Proposal
-We will be designing a website that lets you order food.  It will ask customers from a list of multiple food subjects and create a cart.  Once ready it will let you check out with delivery or pickup.  Then pay with cash.
+We will be designing a website that lets you order catering.  It will ask customers how many are in their party and a list of multiple food items or options to order.  This will all be in a cart where they can proceed to checkout.  Once ready it will let you check out with then pay with credit card.
 
 # Group URL
 https://github.com/iititmd362
