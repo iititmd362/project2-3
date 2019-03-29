@@ -1,6 +1,15 @@
 # EZ Catering
 ## https://www.ezcater.com/
 
+Menu with checkout:
+![alt text](https://github.com/iititmd362/project2-3/blob/master/competitive_analysis/ezcater/menu%20with%20checkout.png)
+
+Have to make an account :/:
+![alt text](https://github.com/iititmd362/project2-3/blob/master/competitive_analysis/ezcater/must%20make%20account.png)
+
+Does have a payement system:
+![alt text](https://github.com/iititmd362/project2-3/blob/master/competitive_analysis/ezcater/payment.png)
+
 payement: only after account creation
 pickup or delivery option available in top left at all times
 date= select-able at all times on top left of screen
