@@ -99,3 +99,32 @@ body.g::after {
 body.g:active::after {
   display: none;
 }
+
+h2{
+  padding-bottom: 1em;
+}
+
+
+
+
+/* Style Sheet Elements for Menu*/
+.food{
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+}
+
+
+/*Style Sheet Elements for Delivery */
+
+
+
+
+
+/*Style Sheet Elements for Checkout */
+
+
+
+
+
+/*Style Sheet Elements for Taster */
