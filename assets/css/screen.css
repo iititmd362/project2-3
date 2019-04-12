@@ -55,7 +55,6 @@ body {
 #form {
 
 }
-
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -122,7 +121,18 @@ h2{
 
 
 /*Style Sheet Elements for Checkout */
+.labels{
+  display: flex;
+  flex-direction: column;
 
+}
+.input{
+  display: flex;
+  width: 300px;
+}
+#street{
+  width: 500px;
+}
 
 
 
