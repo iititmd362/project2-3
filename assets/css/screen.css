@@ -39,25 +39,34 @@ Chose this for blue being a long lasting trusted color for reliability.  While w
 /* ========== Base Styles ========== */
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
+font-size: 1.125em;
+background-color: #d1c6db;
+color: #2d2d39;
+}
 
+body {
+padding: 1em;
 }
 
 h1 {
-  font-size: 1.942em;
+  font-size: 2.618em;
 }
 
 h2 {
   font-size: 1.5708em;
 }
-body {
 
-}
+
 
 /* ========== Layout ========== */
 /* Layout (id selectors; width/height, position, flexbox, grid)*/
 
 #form {
 
+}
+
+#street{
+  width: 500px;
 }
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
@@ -66,6 +75,25 @@ body {
   display: none;
 }
 
+.food-number {
+  width: 50px;
+}
+
+.food {
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+}
+
+.labels{
+  display: flex;
+  flex-direction: column;
+
+}
+.input{
+  display: flex;
+  width: 300px;
+}
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 300px) {
@@ -111,11 +139,7 @@ h2{
 
 
 /* Style Sheet Elements for Menu*/
-.food{
-  display: flex;
-  flex-direction: column;
-  padding: .5em;
-}
+
 
 
 /*Style Sheet Elements for Delivery */
@@ -125,19 +149,6 @@ h2{
 
 
 /*Style Sheet Elements for Checkout */
-.labels{
-  display: flex;
-  flex-direction: column;
-
-}
-.input{
-  display: flex;
-  width: 300px;
-}
-#street{
-  width: 500px;
-}
-
 
 
 
