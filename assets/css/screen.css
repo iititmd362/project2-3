@@ -65,9 +65,10 @@ h2 {
 
 }
 
-#street{
-  width: 500px;
+#street {
+  width: 27.78em;;
 }
+
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -76,7 +77,7 @@ h2 {
 }
 
 .food-number {
-  width: 50px;
+  width: 2.8em;
 }
 
 .food {
@@ -92,12 +93,20 @@ h2 {
 }
 .input{
   display: flex;
-  width: 300px;
+  width: 16.66em;
 }
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 650px) {
+  /*This is for adding columns and setting stopping paragraph from growing*/
+
   html{
+  }
+
+  #menu-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
   }
 }
 
