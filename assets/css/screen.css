@@ -38,6 +38,13 @@ html {
 
 }
 
+h1 {
+  font-size: 1.942em;
+}
+
+h2 {
+  font-size: 1.5708em;
+}
 body {
 
 }
@@ -48,7 +55,6 @@ body {
 #form {
 
 }
-
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -92,3 +98,43 @@ body.g::after {
 body.g:active::after {
   display: none;
 }
+
+h2{
+  padding-bottom: 1em;
+}
+
+
+
+
+/* Style Sheet Elements for Menu*/
+.food{
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+}
+
+
+/*Style Sheet Elements for Delivery */
+
+
+
+
+
+/*Style Sheet Elements for Checkout */
+.labels{
+  display: flex;
+  flex-direction: column;
+
+}
+.input{
+  display: flex;
+  width: 300px;
+}
+#street{
+  width: 500px;
+}
+
+
+
+
+/*Style Sheet Elements for Taster */
