@@ -154,8 +154,22 @@ nav{
   padding-top: 1.0em;
 }
 
+#checkout{
+  display: block;
+  box-sizing: border-box;
+  border-radius: 1em;
+  padding: .5em;
+}
+form{
+  display: block;
+  padding: .5em;
+}
+#nextpage, #menu{
+  display:block;
+  text-decoration: none;
+  padding:1.2em;
 
-
+}
 
 /* Style Sheet Elements for Menu*/
 
