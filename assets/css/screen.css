@@ -143,9 +143,33 @@ body.g:active::after {
 h2{
   padding-bottom: 1em;
 }
+nav{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  display: block;
+  width:3.33em;
+  color: #000;
+  padding-bottom: 1.0em;
+  padding-top: 1.0em;
+}
 
+#checkout{
+  display: block;
+  box-sizing: border-box;
+  border-radius: 1em;
+  padding: .5em;
+}
+form{
+  display: block;
+  padding: .5em;
+}
+#nextpage, #menu{
+  display:block;
+  text-decoration: none;
+  padding:1.2em;
 
-
+}
 
 /* Style Sheet Elements for Menu*/
 
