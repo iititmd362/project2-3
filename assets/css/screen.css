@@ -31,6 +31,9 @@ Palette URL: https://coolors.co/ffffff-b49ec9-d1c6db-2d2d39-989b9f
 #989b9f
 Chose this for blue being a long lasting trusted color for reliability.  While we are a new company, we are growing and throwing green into the frey would help push that.  The red is meant to compliment, yet not hurt the eyes.
 
+
+
+Font:
 */
 
 
@@ -42,11 +45,13 @@ html {
   font-size: 1.125em;
   background-color: #d1c6db;
   color: #2d2d39;
-  font-family: 'Work Sans',sans-serif;
 }
 
 body {
   padding: 1em;
+  margin: 0;
+  font-family: 'Titillium Web',sans-serif;
+
 }
 
 h1 {
@@ -60,6 +65,7 @@ h2 {
 
 nav {
   float:right;
+  width: 100%;
 }
 nav ul {
   list-style-type: none;
@@ -73,6 +79,7 @@ nav li {
   color: #000;
   padding-bottom: 1em;
   padding-top: 1em;
+  padding-right: 1.5em;
 }
 nav a {
   color: #2d2d39
