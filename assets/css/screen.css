@@ -39,13 +39,13 @@ Chose this for blue being a long lasting trusted color for reliability.  While w
 /* ========== Base Styles ========== */
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
-font-size: 1.125em;
-background-color: #d1c6db;
-color: #2d2d39;
+  font-size: 1.125em;
+  background-color: #d1c6db;
+  color: #2d2d39;
 }
 
 body {
-padding: 1em;
+  padding: 1em;
 }
 
 h1 {
@@ -54,21 +54,45 @@ h1 {
 
 h2 {
   font-size: 1.5708em;
+  padding-bottom: 1em;
 }
 
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 3.33em;
+  color: #000;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
 
+form {
+  display: block;
+  padding: 0.5em;
+}
 
 /* ========== Layout ========== */
 /* Layout (id selectors; width/height, position, flexbox, grid)*/
-
-#form {
-
-}
 
 #street {
   width: 27.78em;;
 }
 
+#checkout {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+#nextpage, #menu {
+  display: block;
+  text-decoration: none;
+  padding: 1.2em;
+
+}
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -83,15 +107,15 @@ h2 {
 .food {
   display: flex;
   flex-direction: column;
-  padding: .5em;
+  padding: 0.5em;
 }
 
-.labels{
+.labels {
   display: flex;
   flex-direction: column;
 
 }
-.input{
+.input {
   display: flex;
   width: 16.66em;
 }
@@ -99,9 +123,6 @@ h2 {
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 650px) {
   /*This is for adding columns and setting stopping paragraph from growing*/
-
-  html{
-  }
 
   #menu-form {
     display: grid;
@@ -139,12 +160,6 @@ body.g::after {
 body.g:active::after {
   display: none;
 }
-
-h2{
-  padding-bottom: 1em;
-}
-
-
 
 
 /* Style Sheet Elements for Menu*/
