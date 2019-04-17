@@ -45,13 +45,12 @@ html {
   font-size: 1.125em;
   background-color: #d1c6db;
   color: #2d2d39;
+  font-family: 'Georgia',serif;
 }
 
 body {
   padding: 1em;
   margin: 0;
-  font-family: 'Titillium Web',sans-serif;
-
 }
 
 h1 {
