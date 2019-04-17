@@ -7,9 +7,10 @@
   // Da Dom offers you a favor you cant refuse
   document.addEventListener('DOMContentLoaded', function(){
     // Make this top of everything!
-    sto = window.localStorage;
-    var items=[null,'Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
-    var quantity=[];
+    var sto = window.localStorage;
+    var items=[null, 'Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
+    console.log(items);
+
     if (storageAvailable('localStorage')){
       if (document.querySelector('#menupage') !==null){
         addPrevious();
@@ -19,12 +20,12 @@
     console.log(sto);
     // Declare variables
     // toggle function for focus css
-    /* function focus(){
-       console.log('yeah they click me!');
+    function focus(){
+      console.log('yeah they click me!');
       if (document.querySelector('.focus')!==null){// this is to throw out error when no focus
         document.querySelector('.focus').classList.toggle('focus');}
       this.classList.toggle('focus');
-    } */
+    }
 
     function addPrevious(){
       var i;
@@ -32,20 +33,23 @@
       for(i=0; i<19; i++){
         foodnum='#'+'food'+(i+1);
         document.querySelector(foodnum).value=sto.getItem(i);
-      };
-    };
+      }
+    }
 
     function addEvents(){
       var i;
       var foodnum;
       for(i=0; i<19; i++){
         foodnum='#'+'food'+(i+1);
+        document.querySelector(foodnum).addEventListener('focus', focus);
         document.querySelector(foodnum).addEventListener('change', function(e){
           var theid;
-          if (e.target.id.length==5)
+          if (e.target.id.length===5){
             theid = e.target.id.charAt(4);
-          if(e.target.id.length==6)
+          }
+          if(e.target.id.length===6){
             theid = (1+e.target.id.charAt(5));
+          }
           setquantity([theid]-1, e.target.value);
           console.log(sto.getItem(theid-1));
         });
@@ -53,9 +57,9 @@
     }
 
     function setquantity(i, v){
-      sto.setItem(i,v);
+      sto.setItem(i, v);
     }
-    /*
+    /**
     function eq(value, condition) {
       return value === condition;
     }
@@ -73,15 +77,14 @@
     } */
   });
   function storageAvailable(type) {
-  try {
-    var storage = window[type],
-    x = '__storage_test__';
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
+    var storage = window[type], x = '__storage_test__';
+    try {
+      storage.setItem(x, x);
+      storage.removeItem(x);
+      return true;
+    }
+    catch(e) {
+      return false;
+    }
   }
-  catch(e) {
-    return false;
-  }
-}
 })();
