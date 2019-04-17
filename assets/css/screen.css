@@ -114,6 +114,9 @@ form {
   padding: 1.2em;
 
 }
+label{
+  padding-bottom: .5em;
+}
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -123,6 +126,9 @@ form {
 
 .food-number {
   width: 2.8em;
+}
+#checkbox{
+  float: left;
 }
 
 .food {
