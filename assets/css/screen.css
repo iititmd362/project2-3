@@ -61,7 +61,7 @@ h1 {
 
 h2 {
   font-size: 1.5708em;
-  padding:.75em;
+  padding-top: 1em;
 }
 p{
   padding: .5em;
@@ -90,7 +90,13 @@ nav a{
 }
 form {
   display: block;
-  padding: 0.5em;
+  padding: .5em;
+}
+#checked{
+  float: left;
+}
+#checkbox{
+  float: right;
 }
 
 /* ========== Layout ========== */
@@ -100,21 +106,17 @@ form {
   width: 27.78em;;
 }
 
-#checkout {
+/*#checkout {
   display: block;
   box-sizing: border-box;
   border-radius: 1em;
   padding: 0.5em;
-}
-
-#nextpage, #menu {
+}*/
+#checkout label{
+  padding-top: 1em;
+  padding-bottom: .25em;
+  box-sizing: border-box;
   display: block;
-  text-decoration: none;
-  padding: 1.2em;
-
-}
-label{
-  padding-bottom: .5em;
 }
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
@@ -125,9 +127,6 @@ label{
 
 .food-number {
   width: 2.8em;
-}
-#checkbox{
-  float: left;
 }
 
 .food {
