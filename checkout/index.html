@@ -27,11 +27,17 @@
             <input type="text" id="lname" class="input" />
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" class="input" />
-            <label for="email">Email</label>
+            <label for="email" >Email</label>
             <input type="text" id="email" class="input" />
           </section>
-        <h2>Delivery Address</h2>
+        <h2>Delivery Information</h2>
           <section id="deliveryaddr">
+            <label for="date"><i class="labels">Date</label>
+            <input type="date" id="date" name="date">
+            <label for="checkbox" id="checked">Check box below if it needs to be delivered today</label>
+            <input type="checkbox" id="checkbox" value="today"/>
+            <label for="time"><i class="labels">Time</label>
+            <input type="time"  id="time" name="time">
             <label for="street">Street Address</label>
             <input type="text" id="street" class="input" />
             <label for="apartment">Apartment number</label>
@@ -58,8 +64,6 @@
             <input type="submit" id="submit" value="Submit" />
           </section>
       </form>
-      <a href="../index.html">Menu</a>
-      <a href="../delivery/index.html" id="nextpage">Delivery</a>
     </main>
     <footer>
     </footer>
