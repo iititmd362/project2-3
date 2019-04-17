@@ -56,36 +56,38 @@ body {
 
 h1 {
   font-size: 2.618em;
+  padding: 1em;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.5708em;
-  padding-bottom: 1em;
+  padding:.75em;
+}
+p{
+  padding: .5em;
 }
 
 nav {
-  float:right;
   width: 100%;
 }
-nav ul {
+nav ul{
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  background-color:grey;
+  padding 0;
+  overflow: hidden;
+  width: 100%;
 }
-nav li {
+nav li{
   display: inline-block;
-  width: 3.33em;
-  color: #000;
-  padding-bottom: 1em;
-  padding-top: 1em;
-  padding-right: 1.5em;
+  background-color:#989b9f;
+  float:left;
+  padding: 1em 1.5em;
 }
-nav a {
-  color: #2d2d39
-  text-transform:uppercase;
-  display: block;
-  position: absolute;
+nav a{
+  text-align: center;
+  text-decoration: none;
+}
 }
 form {
   display: block;
