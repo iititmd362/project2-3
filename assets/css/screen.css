@@ -117,7 +117,7 @@ form {
 }
 
 .food-number {
-  width: 2.8em;
+  max-width: 3em;
 }
 
 .food {
@@ -132,8 +132,7 @@ form {
 
 }
 .input {
-  display: flex;
-  width: 16.66em;
+  max-width: 16.66em;
 }
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
