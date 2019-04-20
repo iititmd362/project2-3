@@ -8,20 +8,24 @@
   document.addEventListener('DOMContentLoaded', function(){
     // Make this top of everything!
     var sto = window.localStorage;
-    var items=[null, 'Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
+    var items=['Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
     console.log(items);
-
+    console.log(sto);
     if (storageAvailable('localStorage')){
       if (document.querySelector('#menupage') !==null){
         addPrevious();
         addEvents();
       }
     }
-    console.log(sto);
+    document.querySelector("#mclear").addEventListener('click',function(e){
+      for(i=0; i<19; i++){
+        sto.setItem(i,null);
+        console.log(sto.getItem(i));
+      }
+    });
     // Declare variables
     // toggle function for focus css
     function focus(){
-      console.log('yeah they click me!');
       if (document.querySelector('.focus')!==null){// this is to throw out error when no focus
         document.querySelector('.focus').classList.toggle('focus');}
       this.classList.toggle('focus');
@@ -51,7 +55,6 @@
             theid = (1+e.target.id.charAt(5));
           }
           setquantity([theid]-1, e.target.value);
-          console.log(sto.getItem(theid-1));
         });
       }
     }
