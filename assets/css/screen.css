@@ -51,6 +51,8 @@ html {
 body {
   padding: 1em;
   margin: 0;
+  max-width: 68.22em;
+  margin: auto;
 }
 
 h1 {
@@ -134,6 +136,12 @@ form {
 .input {
   max-width: 16.66em;
 }
+
+.boom {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 650px) {
@@ -142,6 +150,8 @@ form {
   #menu-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 47em;
+    margin: auto;
 
   }
 }
