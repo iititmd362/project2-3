@@ -24,13 +24,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }}
 
 Palette URL: https://coolors.co/ffffff-b49ec9-d1c6db-2d2d39-989b9f
-#ffffff
-#b49ec9
-#d1c6db
-#2d2d39
-#989b9f
+#ffffff -white
+#b49ec9 -light lav
+#d1c6db -lightest lav
+#2d2d39 -gunmetal
+#989b9f   -gray
 Chose this for blue being a long lasting trusted color for reliability.  While we are a new company, we are growing and throwing green into the frey would help push that.  The red is meant to compliment, yet not hurt the eyes.
 
+https://coolors.co/1c0221-7b5e7b-b49ec9-e9eb87-b9f18c
+1c0221    - dark lavender
+7b5e7b    - medium lav
+b49ec9    -light lav
+e9eb87    -yello
+b9f18c    -light green
 
 
 Font:
@@ -43,12 +49,13 @@ Font:
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
   font-size: 1.125em;
-  background-color: #d1c6db;
-  color: #2d2d39;
+  background-color: #1c0221;
+  color: #1c0221;
   font-family: 'Georgia',serif;
 }
 
 body {
+  background-color: #b49ec9;
   padding: 1em;
   margin: 0;
   max-width: 68.22em;
@@ -74,10 +81,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #989b9f;
+  background-color: #7b5e7b;
 }
 nav a {
-  flex-shrink: 1;
+  color: #d1c6db;
   padding: 0.5em 1em;
   margin: 0.5em;
   text-align: center;
@@ -88,11 +95,9 @@ form {
   display: block;
   padding: .5em;
 }
-#checked{
-  float: left;
-}
-#checkbox{
-  float: right;
+
+section h2 {
+  text-decoration: underline;
 }
 
 /* ========== Layout ========== */
@@ -111,6 +116,36 @@ form {
   box-sizing: border-box;
   display: block;
 }
+
+#nextorclear {
+  display: flex;
+  flex-direction: column;
+  max-width: 40em;
+  margin: auto;
+}
+
+#nextorclear li{
+  text-align: center;
+  padding: .5em;
+  margin: .25em;
+}
+
+#submitbut{
+  background-color: #b9f18c;
+}
+
+#clearbut{
+  background-color: #e9eb87;
+}
+
+#checked {
+  float: left;
+}
+
+#checkbox {
+  float: right;
+}
+
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -120,12 +155,18 @@ form {
 
 .food-number {
   max-width: 3em;
+  padding: 0.5em 0;
+  margin-bottom: .5em;
 }
 
 .food {
   display: flex;
   flex-direction: column;
   padding: 0.5em;
+}
+
+.food h2 {
+  text-decoration: underline;
 }
 
 .labels {
@@ -141,7 +182,9 @@ form {
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
+  text-decoration: underline;
 }
+
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 650px) {
@@ -154,6 +197,9 @@ form {
     margin: auto;
 
   }
+
+  #nextorclear {
+    font-size: 1.5708em;
 }
 
 /*Baseline css*/
