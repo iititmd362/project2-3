@@ -51,13 +51,12 @@ html {
   font-size: 1.125em;
   background-color: #1c0221;
   color: #1c0221;
-  font-family: 'Georgia',serif;
+  font-family: Georgia, serif;
 }
 
 body {
   background-color: #b49ec9;
   padding: 1em;
-  margin: 0;
   max-width: 68.22em;
   margin: auto;
 }
@@ -93,7 +92,7 @@ nav a {
 
 form {
   display: block;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 section h2 {
@@ -110,9 +109,9 @@ section h2 {
   border-radius: 1em;
   padding: 0.5em;
 }*/
-#checkout label{
+#checkout label {
   padding-top: 1em;
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
   box-sizing: border-box;
   display: block;
 }
@@ -124,17 +123,17 @@ section h2 {
   margin: auto;
 }
 
-#nextorclear li{
+#nextorclear li {
   text-align: center;
-  padding: .5em;
-  margin: .25em;
+  padding: 0.5em;
+  margin: 0.25em;
 }
 
-#submitbut{
+#submitbut {
   background-color: #b9f18c;
 }
 
-#clearbut{
+#clearbut {
   background-color: #e9eb87;
 }
 
@@ -156,7 +155,7 @@ section h2 {
 .food-number {
   max-width: 3em;
   padding: 0.5em 0;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .food {
@@ -200,8 +199,9 @@ section h2 {
 
   #nextorclear {
     font-size: 1.5708em;
-}
+  }
 
+}
 /*Baseline css*/
 /**
 * A quick baseline grid overlay using css+svg.

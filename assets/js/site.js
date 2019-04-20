@@ -11,19 +11,25 @@
     var items=['Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
     console.log(items);
     console.log(sto);
+
+
+    // load previous local storage data
     if (storageAvailable('localStorage')){
       if (document.querySelector('#menupage') !==null){
         addPrevious();
         addEvents();
       }
     }
-    document.querySelector("#mclear").addEventListener('click',function(e){
+
+    // delete previous form data but not all of local storage
+    document.querySelector("#mclear").addEventListener('click', function(){
+      var i;
       for(i=0; i<19; i++){
-        sto.setItem(i,null);
+        sto.setItem(i, null);
         console.log(sto.getItem(i));
       }
     });
-    // Declare variables
+
     // toggle function for focus css
     function focus(){
       if (document.querySelector('.focus')!==null){// this is to throw out error when no focus
@@ -31,6 +37,7 @@
       this.classList.toggle('focus');
     }
 
+    // code for adding previous data
     function addPrevious(){
       var i;
       var foodnum;
@@ -40,6 +47,7 @@
       }
     }
 
+    // code for adding event listeners
     function addEvents(){
       var i;
       var foodnum;
@@ -59,26 +67,14 @@
       }
     }
 
+    // code for setting local storage
     function setquantity(i, v){
       sto.setItem(i, v);
     }
-    /**
-    function eq(value, condition) {
-      return value === condition;
-    }
-    function gt(value, condition) {
-      return value > condition;
-    }
-    function gte(value, condition) {
-      return value >= condition;
-    }
-    function lt(value,condition) {
-      return value < condition;
-    }
-    function lte(value,condition) {
-      return value <= condition;
-    } */
+
   });
+
+  // code for seeing if local storage is accessable
   function storageAvailable(type) {
     var storage = window[type], x = '__storage_test__';
     try {
