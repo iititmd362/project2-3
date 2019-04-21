@@ -184,6 +184,10 @@ section h2 {
   text-decoration: underline;
 }
 
+.but {
+  margin: 0.5em;
+}
+
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 650px) {
