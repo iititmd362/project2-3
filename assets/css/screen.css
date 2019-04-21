@@ -166,6 +166,12 @@ section h2 {
   display: none;
 }
 
+.about-us {
+  text-align: center;
+  margin: 0.5em;
+  line-height: 1.5708em;
+}
+
 .food-number {
   max-width: 3em;
   padding: 0.5em 0;
@@ -201,6 +207,17 @@ section h2 {
 .but {
   margin: 0.5em;
 }
+
+.footer {
+  display: block;
+  text-align: center;
+  margin: 1.5em;
+}
+
+.footer a{
+  padding: 1.125em;
+}
+
 
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
