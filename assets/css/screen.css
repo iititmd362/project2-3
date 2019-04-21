@@ -176,6 +176,8 @@ section h2 {
   max-width: 3em;
   padding: 0.5em 0;
   margin-bottom: 0.5em;
+  float: right;
+
 }
 
 .food {
@@ -188,11 +190,13 @@ section h2 {
   text-decoration: underline;
 }
 
-.labels {
+.food label{
   display: flex;
   flex-direction: column;
-
+  margin: 0.5em;
+  padding: 0 0 0.5em 0.5em;
 }
+
 .input {
   max-width: 16.66em;
 }
@@ -234,6 +238,10 @@ section h2 {
 
   #nextorclear {
     font-size: 1.5708em;
+  }
+
+  .food-number {
+    float: left;
   }
 
 }
