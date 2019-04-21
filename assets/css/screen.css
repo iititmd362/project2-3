@@ -45,7 +45,7 @@ html {
   font-size: 1.125em;
   background-color: #d1c6db;
   color: #2d2d39;
-  font-family: 'Georgia',serif;
+  font-family: 'Roboto';
 }
 
 body {
@@ -54,9 +54,10 @@ body {
 }
 
 h1 {
-  font-size: 2.618em;
-  padding: 0.5em;
+  font-size: 3.273em;
+  padding: 0 0 0.5em 0;
   text-align: center;
+  font-family: 'Grand Hotel', cursive;
 }
 
 h2 {
@@ -64,6 +65,7 @@ h2 {
   padding: 0.75em;
   padding-top: 1em;
 }
+
 p {
   padding: 0.5em 0;
 }
