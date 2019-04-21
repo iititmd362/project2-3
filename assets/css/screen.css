@@ -24,13 +24,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }}
 
 Palette URL: https://coolors.co/ffffff-b49ec9-d1c6db-2d2d39-989b9f
-#ffffff
-#b49ec9
-#d1c6db
-#2d2d39
-#989b9f
+#ffffff -white
+#b49ec9 -light lav
+#d1c6db -lightest lav
+#2d2d39 -gunmetal
+#989b9f   -gray
 Chose this for blue being a long lasting trusted color for reliability.  While we are a new company, we are growing and throwing green into the frey would help push that.  The red is meant to compliment, yet not hurt the eyes.
 
+https://coolors.co/1c0221-7b5e7b-b49ec9-e9eb87-b9f18c
+1c0221    - dark lavender
+7b5e7b    - medium lav
+b49ec9    -light lav
+e9eb87    -yello
+b9f18c    -light green
 
 
 Font:
@@ -49,8 +55,10 @@ html {
 }
 
 body {
+  background-color: #b49ec9;
   padding: 1em;
-  margin: 0;
+  max-width: 68.22em;
+  margin: auto;
 }
 
 h1 {
@@ -74,10 +82,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #989b9f;
+  background-color: #7b5e7b;
 }
 nav a {
-  flex-shrink: 1;
+  color: #d1c6db;
   padding: 0.5em 1em;
   margin: 0.5em;
   text-align: center;
@@ -86,6 +94,7 @@ nav a {
 
 form {
   display: block;
+  padding: 0.5em;
   padding: .5em;
 }
 
@@ -99,17 +108,14 @@ form {
 #checked{
   float: left;
 }
-#checkbox{
-  float: right;
+
+section h2 {
+  text-decoration: underline;
 }
 
 /* ========== Layout ========== */
 /* Layout (id selectors; width/height, position, flexbox, grid)*/
 
-
-#street {
-  width: 27.78em;;
-}
 
 /*#checkout {
   display: block;
@@ -117,12 +123,42 @@ form {
   border-radius: 1em;
   padding: 0.5em;
 }*/
-#checkout label{
+#checkout label {
   padding-top: 1em;
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
   box-sizing: border-box;
   display: block;
 }
+
+#nextorclear {
+  display: flex;
+  flex-direction: column;
+  max-width: 40em;
+  margin: auto;
+}
+
+#nextorclear li {
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.25em;
+}
+
+#submitbut {
+  background-color: #b9f18c;
+}
+
+#clearbut {
+  background-color: #e9eb87;
+}
+
+#checked {
+  float: left;
+}
+
+#checkbox {
+  float: right;
+}
+
 /* ========== Module ========== */
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
@@ -131,7 +167,9 @@ form {
 }
 
 .food-number {
-  width: 2.8em;
+  max-width: 3em;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
 }
 
 .food {
@@ -140,15 +178,30 @@ form {
   padding: 0.5em;
 }
 
+.food h2 {
+  text-decoration: underline;
+}
+
 .labels {
   display: flex;
   flex-direction: column;
 
 }
 .input {
-  display: flex;
-  width: 16.66em;
+  max-width: 16.66em;
 }
+
+.boom {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.but {
+  margin: 0.5em;
+}
+
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (min-width: 650px) {
@@ -157,10 +210,16 @@ form {
   #menu-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 47em;
+    margin: auto;
 
   }
-}
 
+  #nextorclear {
+    font-size: 1.5708em;
+  }
+
+}
 /*Baseline css*/
 /**
 * A quick baseline grid overlay using css+svg.
