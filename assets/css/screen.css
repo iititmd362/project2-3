@@ -166,10 +166,18 @@ section h2 {
   display: none;
 }
 
+.about-us {
+  text-align: center;
+  margin: 0.5em;
+  line-height: 1.5708em;
+}
+
 .food-number {
   max-width: 3em;
   padding: 0.5em 0;
   margin-bottom: 0.5em;
+  float: right;
+
 }
 
 .food {
@@ -182,11 +190,13 @@ section h2 {
   text-decoration: underline;
 }
 
-.labels {
+.food label{
   display: flex;
   flex-direction: column;
-
+  margin: 0.5em;
+  padding: 0 0 0.5em 0.5em;
 }
+
 .input {
   max-width: 16.66em;
 }
@@ -201,6 +211,19 @@ section h2 {
 .but {
   margin: 0.5em;
 }
+
+.footer {
+  display: block;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  background-color: #7b5e7b;
+}
+
+.footer a{
+  padding: 2em;
+}
+
 
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
@@ -217,6 +240,10 @@ section h2 {
 
   #nextorclear {
     font-size: 1.5708em;
+  }
+
+  .food-number {
+    float: left;
   }
 
 }
