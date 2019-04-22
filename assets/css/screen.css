@@ -60,6 +60,9 @@ body {
   max-width: 68.22em;
   margin: auto;
 }
+figcaption {
+  display: none;
+}
 
 h1 {
   font-size: 3.273em;
