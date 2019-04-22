@@ -51,7 +51,7 @@ html {
   font-size: 1.125em;
   background-color: #d1c6db;
   color: #2d2d39;
-  font-family: 'Roboto';
+  font-family: Roboto;
 }
 
 body {
@@ -68,7 +68,7 @@ h1 {
   font-size: 3.273em;
   padding: 0 0 0.5em 0;
   text-align: center;
-  font-family: 'Grand Hotel', cursive;
+  font-family: "Grand Hotel", cursive;
 }
 
 h2 {
@@ -98,7 +98,6 @@ nav a {
 form {
   display: block;
   padding: 0.5em;
-  padding: .5em;
 }
 
 #logo {
@@ -108,7 +107,7 @@ form {
   width: 13vw;
 }
 
-#checked{
+#checked {
   float: left;
 }
 
@@ -126,6 +125,14 @@ section h2 {
   border-radius: 1em;
   padding: 0.5em;
 }*/
+
+.food label {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  padding: 0 0 0.5em 0.5em;
+}
+
 #checkout label {
   padding-top: 1em;
   padding-bottom: 0.25em;
@@ -152,10 +159,6 @@ section h2 {
 
 #clearbut {
   background-color: #e9eb87;
-}
-
-#checked {
-  float: left;
 }
 
 #checkbox {
@@ -193,12 +196,6 @@ section h2 {
   text-decoration: underline;
 }
 
-.food label{
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em;
-  padding: 0 0 0.5em 0.5em;
-}
 
 .input {
   max-width: 16.66em;
@@ -223,7 +220,7 @@ section h2 {
   background-color: #7b5e7b;
 }
 
-.footer a{
+.footer a {
   padding: 2em;
 }
 
