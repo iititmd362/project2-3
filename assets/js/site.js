@@ -17,6 +17,9 @@
         addEvents();
       }
       if (document.querySelector('#checkoutpage') !==null){
+        document.querySelector('#submit').addEventListener('click', function(){
+          sto.clear();
+        });
         document.querySelector('#review').classList.toggle('nv');
         console.log("your in checkout now");
         addReview();
@@ -113,7 +116,7 @@
           but3.classList.add('nv');
           but3.classList.add('but');
           but3.innerText = "Confirm";
-          // but3.classList.add('nv');
+          but3.classList.add('nv');
 
           // Add elements to list
           li.append(pa);

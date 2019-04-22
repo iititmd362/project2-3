@@ -49,7 +49,7 @@ Font:
 /* Base Styles (element selectors; color, typography, and that's it)*/
 html {
   font-size: 1.125em;
-  background-color: #d1c6db;
+  background-color: #1c0221;
   color: #2d2d39;
   font-family: 'Roboto';
 }
@@ -78,13 +78,14 @@ p {
   padding: 0.5em 0;
 }
 
-nav {
+nav, footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #7b5e7b;
 }
-nav a {
+
+nav a, footer a {
   color: #d1c6db;
   padding: 0.5em 1em;
   margin: 0.5em;
@@ -95,19 +96,8 @@ nav a {
 form {
   display: block;
   padding: 0.5em;
-  padding: .5em;
 }
 
-#logo {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 13vw;
-}
-
-#checked{
-  float: left;
-}
 
 section h2 {
   text-decoration: underline;
@@ -123,11 +113,25 @@ section h2 {
   border-radius: 1em;
   padding: 0.5em;
 }*/
+.food label {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  padding: 0 0 0.5em 0.5em;
+}
+
 #checkout label {
   padding-top: 1em;
   padding-bottom: 0.25em;
   box-sizing: border-box;
   display: block;
+}
+
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 13vw;
 }
 
 #nextorclear {
@@ -190,12 +194,7 @@ section h2 {
   text-decoration: underline;
 }
 
-.food label{
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em;
-  padding: 0 0 0.5em 0.5em;
-}
+
 
 .input {
   max-width: 16.66em;
@@ -210,18 +209,6 @@ section h2 {
 
 .but {
   margin: 0.5em;
-}
-
-.footer {
-  display: block;
-  text-align: center;
-  padding: 0.5em 1em;
-  margin: 0.5em;
-  background-color: #7b5e7b;
-}
-
-.footer a{
-  padding: 2em;
 }
 
 
