@@ -234,6 +234,15 @@ section h2 {
   }
 
 }
+
+@media screen and (min-width: 1078px) {
+
+  html{
+    max-width: 72em;
+    margin: auto;
+  }
+
+}
 /*Baseline css*/
 /**
 * A quick baseline grid overlay using css+svg.
