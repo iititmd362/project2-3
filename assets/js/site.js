@@ -4,6 +4,7 @@
     console.log('Old browser, or you turned off js. Noice'); // not afraid to put it
     return;
   }
+
   // Da Dom offers you a favor you cant refuse
   document.addEventListener('DOMContentLoaded', function(){
     // Make this top of everything!
@@ -25,7 +26,6 @@
         addReview();
       }
     }
-
     // Get item discriptions
     function getItems(i){
       return items[i];
@@ -161,7 +161,7 @@
     }
 
     // code for setting local storage
-    function setquantity(i, v){
+    function setquantity(i, v) {
       sto.setItem(i, v);
     }
 
@@ -179,4 +179,5 @@
       return false;
     }
   }
+
 })();
