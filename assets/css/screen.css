@@ -98,6 +98,9 @@ form {
   padding: 0.5em;
 }
 
+li {
+  list-style-type: none;
+}
 
 section h2 {
   text-decoration: underline;
@@ -194,8 +197,6 @@ section h2 {
   text-decoration: underline;
 }
 
-
-
 .input {
   max-width: 16.66em;
 }
@@ -211,9 +212,15 @@ section h2 {
   margin: 0.5em;
 }
 
-
 /* ========== State ========== */
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
+@media screen and (min-width: 300px) {
+  #checkbox {
+    float: left;
+  }
+
+}
+/* */
 @media screen and (min-width: 650px) {
   /*This is for adding columns and setting stopping paragraph from growing*/
 
@@ -222,8 +229,8 @@ section h2 {
     grid-template-columns: 1fr 1fr;
     max-width: 47em;
     margin: auto;
-
   }
+
 
   #nextorclear {
     font-size: 1.5708em;
@@ -237,7 +244,7 @@ section h2 {
 
 @media screen and (min-width: 1078px) {
 
-  html{
+  html {
     max-width: 72em;
     margin: auto;
   }

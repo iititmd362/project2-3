@@ -69,7 +69,7 @@
       var li, pa, inum, ides, modifybut, deletebut, confirmbut, input;
       item=JSON.parse(sto.getItem('items'));
       for (i=0; i<items.length; i++){
-        if (item[items[i]] !== null && item[items[i]] !== ""){
+        if (item[items[i]] != null && item[items[i]] !== ""){
           // declare the items elements
           li= document.createElement('li');
           pa= document.createElement('p');
