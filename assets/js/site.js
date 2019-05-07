@@ -8,161 +8,144 @@
   document.addEventListener('DOMContentLoaded', function(){
     // Make this top of everything!
     var sto = window.localStorage;
-    var items=['Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
+    var items =['Mozzarella Sticks', 'Spinach Dip', 'Shrimp Cocktail', 'Crab Ragoon', 'Lemon Chicken', 'Spicy Beef', 'Roasted Duck', 'Eggplant Parmesan', 'Italian Beef', 'Fettuccini Alfredo', 'Baked Mostaccioli', 'Spaghetti and Meatballs', 'Greek Salad', 'Ceaser Salad', 'House Salad', 'Baked Potato', 'Mashed Potato', 'Cannoli Bundle', 'Cheese Cake'];
+    var item={};
+    var list = document.getElementsByClassName("food-item");
+    var i;
+    for (i=0; i<list.length; i++){
+      item[list[i].lastElementChild.innerText] = list[i].firstElementChild.value;
+    }
 
-    // load previous local storage data
     if (storageAvailable('localStorage')){
       if (document.querySelector('#menupage') !==null){
         addPrevious();
         addEvents();
       }
       if (document.querySelector('#checkoutpage') !==null){
-        document.querySelector('#submit').addEventListener('click', function(){
-          sto.clear();
-        });
         document.querySelector('#review').classList.toggle('nv');
         console.log("your in checkout now");
         addReview();
       }
-    }
-
-    // Get item discriptions
-    function getItems(i){
-      return items[i];
-    }
-    // toggle function for focus css
-    function focus(){
-      if (document.querySelector('.focus')!==null){// this is to throw out error when no focus
-        document.querySelector('.focus').classList.toggle('focus');}
-      this.classList.toggle('focus');
+      if (document.querySelector('#confirmpage') !==null){
+        document.querySelector('#review').classList.toggle('nv');
+        console.log("your in confirmation now");
+        addConfirm();
+      }
     }
 
     // code for adding previous data
     function addPrevious(){
-      var i;
-      var foodnum;
-      for(i=0; i<19; i++){
-        foodnum='#'+'food'+(i+1);
-        document.querySelector(foodnum).value=sto.getItem(i);
+      var item=sto.getItem('items');
+      if(item !==null){
+        item=JSON.parse(item);
+        for(i=0; i<list.length; i++){
+          list[i].firstElementChild.value=item[list[i].lastElementChild.innerText];
+        }
       }
     }
 
     // code for adding event listeners
     function addEvents(){
-      var i;
-      var foodnum;
-      for(i=0; i<19; i++){
-        foodnum='#'+'food'+(i+1);
-        document.querySelector(foodnum).addEventListener('focus', focus);
-        // delete previous form data but not all of local storage
-        document.querySelector("#mclear").addEventListener('click', function(){
-          var i;
-          for(i=0; i<19; i++){
-            sto.setItem(i, null);
-            console.log(sto.getItem(i));
-          }
-        });
-        document.querySelector(foodnum).addEventListener('change', function(e){
-          var theid;
-          if (e.target.id.length===5){
-            theid = e.target.id.charAt(4);
-          }
-          if(e.target.id.length===6){
-            theid = (1+e.target.id.charAt(5));
-          }
-          setquantity([theid]-1, e.target.value);
+      document.querySelector("#mclear").addEventListener('click', function(){
+        sto.setItem(items, null);
+        for(i=0; i<list.length; i++){
+          list[i].firstElementChild.value="";
+        }
+      });
+
+      document.querySelector("#checkouts").addEventListener('click', function(){
+        sto.setItem("items", JSON.stringify(item));
+      });
+
+      for(i=0; i<list.length; i++){
+        list[i].addEventListener('change', function(e){
+          item[e.target.parentNode.lastElementChild.innerText] = e.target.parentNode.firstElementChild.value;
         });
       }
     }
 
     // code for Adding review Section
     function addReview(){
-      var i, li, pa, inum, ides, but1, but2, but3, input, itemnum;
-      for(i=0; i<19; i++){
-        itemnum =sto.getItem(i);
-        if(itemnum>0){
+      var li, pa, inum, ides, modifybut, deletebut, confirmbut, input;
+      item=JSON.parse(sto.getItem('items'));
+      for (i=0; i<items.length; i++){
+        if (item[items[i]] !== null && item[items[i]] !== ""){
           // declare the items elements
           li= document.createElement('li');
           pa= document.createElement('p');
           inum= document.createElement('i');
           ides= document.createElement('i');
-          but1= document.createElement('a');
-          but2= document.createElement('a');
-          but3= document.createElement('a');
+          modifybut= document.createElement('a');
+          deletebut= document.createElement('a');
+          confirmbut= document.createElement('a');
           input= document.createElement('input');
           // Define item and quantity
           li.classList.add('review-item');
-          li.id= i;
-          inum.id= 'inum'+i;
-          input.id='input'+i;
-          input.classList.add("food-number", "nv");
-          inum.innerText=sto.getItem(i);
-          ides.innerText=" x "+getItems(i);
+          li.id= items[i];
+          input.classList.add("nv");
+          inum.innerText=item[items[i]];
+          ides.innerText=" x "+items[i];
           pa.append(inum);
           pa.append(input);
           pa.append(ides);
 
           // Define buttons
-          but1.id= 'but'+(i+1)+'-1';
-          but1.innerText = "Modify";
-          but1.href='#';
-          but1.classList.add('but');
-          but2.id= 'but'+(i+1)+'-2';
-          but2.href='#';
-          but2.innerText = "Delete";
-          but2.classList.add('but');
-          but3.id= 'but'+(i+1)+'-3';
-          but3.href='#';
-          but3.classList.add('nv');
-          but3.classList.add('but');
-          but3.innerText = "Confirm";
-          but3.classList.add('nv');
+          modifybut.id= 'but'+(i+1)+'-1';
+          modifybut.innerText = "Modify";
+          modifybut.href='#';
+          modifybut.classList.add('but');
+          deletebut.id= 'but'+(i+1)+'-2';
+          deletebut.href='#';
+          deletebut.innerText = "Delete";
+          deletebut.classList.add('but');
+          confirmbut.id= 'but'+(i+1)+'-3';
+          confirmbut.href='#';
+          confirmbut.classList.add('nv');
+          confirmbut.classList.add('but');
+          confirmbut.innerText = "Confirm";
+          confirmbut.classList.add('nv');
 
           // Add elements to list
           li.append(pa);
-          li.append(but1);
-          li.append(but2);
-          li.append(but3);
+          li.append(modifybut);
+          li.append(deletebut);
+          li.append(confirmbut);
           document.querySelector('#review').append(li);
 
 
           // add event listeners
-          document.querySelector('#'+but1.id).addEventListener('click', function(e){
-            // modify number====console.log(e.target.parentNode.firstChild.firstChild.innerText);
-            console.log(e.target.parentNode.firstChild);
-            e.target.parentNode.firstChild.firstChild.classList.toggle('nv');
-            e.target.parentNode.firstChild.childNodes[1].classList.toggle('nv');
-            e.target.parentNode.childNodes[1].classList.toggle('nv');
-            e.target.parentNode.childNodes[2].classList.toggle('nv');
-            e.target.parentNode.childNodes[3].classList.toggle('nv');
+          document.querySelector('#'+modifybut.id).addEventListener('click', function(e){
+            var tarpar= e.target.parentNode;
+            tarpar.firstChild.firstChild.classList.toggle('nv');
+            tarpar.firstChild.childNodes[1].classList.toggle('nv');
+            tarpar.childNodes[1].classList.toggle('nv');
+            tarpar.childNodes[2].classList.toggle('nv');
+            tarpar.childNodes[3].classList.toggle('nv');
           });
-          document.querySelector('#'+but2.id).addEventListener('click', function(e){
+          document.querySelector('#'+deletebut.id).addEventListener('click', function(e){
+            var tarpar= e.target.parentNode;
             // delete entire parent
-            e.target.parentNode.remove();
-            setquantity(e.target.parentNode.id, null);
-            console.log(e.target.parentNode.id, null);
-
+            tarpar.remove();
+            item[tarpar.id]=null;
           });
-          document.querySelector('#'+but3.id).addEventListener('click', function(e){
-            // delete entire parent
-            var value =document.querySelector('#input'+e.target.parentNode.id).value;
-            console.log(e.target.parentNode.id, value);
-            setquantity(e.target.parentNode.id, value);
-            e.target.parentNode.firstChild.firstChild.classList.toggle('nv');
-            e.target.parentNode.firstChild.childNodes[1].classList.toggle('nv');
-            e.target.parentNode.firstChild.firstChild.innerText=value;
-            e.target.parentNode.childNodes[1].classList.toggle('nv');
-            e.target.parentNode.childNodes[2].classList.toggle('nv');
-            e.target.parentNode.childNodes[3].classList.toggle('nv');
+          document.querySelector('#'+confirmbut.id).addEventListener('click', function(e){
+            var tarpar= e.target.parentNode;
+            var newval=tarpar.firstChild.childNodes[1].value;
+            item[tarpar.id]=newval;
+            tarpar.firstChild.firstChild.classList.toggle('nv');
+            tarpar.firstChild.childNodes[1].classList.toggle('nv');
+            tarpar.firstChild.firstChild.innerText=newval;
+            tarpar.childNodes[1].classList.toggle('nv');
+            tarpar.childNodes[2].classList.toggle('nv');
+            tarpar.childNodes[3].classList.toggle('nv');
           });
-
         }
       }
     }
 
-    // code for setting local storage
-    function setquantity(i, v){
-      sto.setItem(i, v);
+    // code for confirm page
+    function addConfirm(){
+
     }
 
   });
