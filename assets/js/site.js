@@ -66,7 +66,7 @@
     function addPrevious(){
       var item=sto.getItem('items');
       // eslint doesnt like.  I like, grabs undefined as well.(i know i could write a second && not undefined.Same goes for line 102 and 181)
-      if(item !=null){
+      if(item.length !=0){
         item=JSON.parse(item);
         for(i=0; i<list.length; i++){
           list[i].firstElementChild.value=item[list[i].lastElementChild.innerText];
@@ -83,7 +83,11 @@
         }
       });
 
+      // Add values to local storage
       document.querySelector("#checkouts").addEventListener('click', function(){
+        for (i=0; i<list.length; i++){
+          item[list[i].lastElementChild.innerText] = list[i].firstElementChild.value;
+        }
         sto.setItem("items", JSON.stringify(item));
       });
 
@@ -194,7 +198,7 @@
 
           // Add elements to list
           li.append(pa);
-          document.querySelector('#review').append(li);
+          document.querySelector('#review-list').append(li);
         }
       }
     }
